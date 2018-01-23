@@ -19,14 +19,14 @@ options = {
   map_builder = MAP_BUILDER,
   trajectory_builder = TRAJECTORY_BUILDER,
   map_frame = "map",
-  tracking_frame = "base_link",
+  tracking_frame = "gps",
   published_frame = "base_link",
   odom_frame = "odom",
   provide_odom_frame = true,
   use_odometry = false,
   num_laser_scans = 0,
   num_multi_echo_laser_scans = 0,
-  num_subdivisions_per_laser_scan = 1,
+  num_subdivisions_per_laser_scan = 10,
   num_point_clouds = 2,
   lookup_transform_timeout_sec = 0.2,
   submap_publish_period_sec = 0.3,
@@ -37,10 +37,11 @@ options = {
   imu_sampling_ratio = 1.,
 }
 
-TRAJECTORY_BUILDER_3D.num_accumulated_range_data = 160
-
+TRAJECTORY_BUILDER_3D.num_accumulated_range_data = 1
+--TRAJECTORY_BUILDER_3D.use_online_correlative_scan_matching = true
+--TRAJECTORY_BUILDER_3D.submaps.num_range_data=10
 MAP_BUILDER.use_trajectory_builder_3d = true
-MAP_BUILDER.num_background_threads = 20
+MAP_BUILDER.num_background_threads = 7
 POSE_GRAPH.optimization_problem.huber_scale = 5e2
 POSE_GRAPH.optimize_every_n_nodes = 320
 POSE_GRAPH.constraint_builder.sampling_ratio = 0.03
