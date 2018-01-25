@@ -1,0 +1,30 @@
+gm@CJ:~/catkin_vlp$ rosrun cartographer_ros cartographer_rosbag_validate -bag_filename /home/gm/2018-1-15-17-24-cartographer-subway.bag 
+E0125 19:44:39.796569  3960 rosbag_validate_main.cc:121] frame_id utm time 1516009772392129968: Odometry pose is invalid. pose position: 
+  x: 0
+  y: 0
+  z: 0
+orientation: 
+  x: 0
+  y: 0
+  z: 0
+  w: 0
+E0125 19:44:39.796896  3960 rosbag_validate_main.cc:121] frame_id utm time 1516009772402190993: Odometry pose is invalid. pose position: 
+  x: 0
+  y: 0
+  z: 0
+orientation: 
+  x: 0
+  y: 0
+  z: 0
+  w: 0
+E0125 19:44:39.796934  3960 rosbag_validate_main.cc:121] frame_id utm time 1516009772412081307: Odometry pose is invalid. pose position: 
+  x: 0
+  y: 0
+  z: 0
+orientation: 
+  x: 0
+  y: 0
+  z: 0
+  w: 0
+ (the core has been dumped)
+gm@CJ:~/catkin_vlp$ 
